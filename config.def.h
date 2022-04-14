@@ -173,7 +173,7 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
-        { MODKEY,               XK_o,    opencopied,     {.v = "ungoogled-chromium"} },
+        { Mod1Mask,               XK_o,    opencopied,     {.v = "ungoogled-chromium"} },
 };
 
 /* Internal keyboard shortcuts. */
