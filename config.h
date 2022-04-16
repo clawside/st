@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Jetbrains Mono NF:pixelsize=12.5:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 6;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -176,7 +176,7 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
-        { Mod1Mask,               XK_o,    opencopied,     {.v = "ungoogled-chromium"} },
+        { Mod1Mask,             XK_o,    opencopied,     {.v = "ungoogled-chromium"} },
 };
 
 /* Internal keyboard shortcuts. */
@@ -192,13 +192,13 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+	{ Mod1Mask,             XK_c,           clipcopy,       {.i =  0} },
+	{ Mod1Mask,              XK_v,           clippaste,      {.i =  0} },
+	{ Mod1Mask,              XK_y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ Mod1Mask,            XK_j,           kscrollup,      {.i = 1} },
+	{ Mod1Mask,            XK_k,           kscrolldown,    {.i = 1} },
 };
 
 /*
