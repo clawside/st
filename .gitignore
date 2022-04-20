@@ -1,6 +1,7 @@
 .gitignore
 *.o
 st
+*.rej
 *.orig
 *.diff
 patches/
